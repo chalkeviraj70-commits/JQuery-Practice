@@ -8,20 +8,61 @@
 </head>
 <body>
 
-    <h1>this is effect in js</h1>
+    <h1 id="b11">this is effect in js</h1>
     
 
-    <button>Click me</button>
+    <button id="b1">Click me</button>
 
 
+<!-- // hide effect with (speed and callback) -->
+
+    <h1 id="b22">this is hide effect with (speed and callback)</h1>
+    <button id="b2">Click me</button>
+
+<!--  hide effect with (speed,easing, callback) -->
+
+    <h1 id="b33">this is hide effect with (speed,easing,callback)</h1>
+    <button id="b3">click me</button>
 
     <script>
    
    $(function(){
-    $("button").click(function(){
-        $("h1").hide()
+    $("#b1").click(function(){
+        $("#b11").hide()
     })
    })
+
+
+//     hide effect with (speed and callback)
+
+   $(function(){
+    $("#b2").click(function(){
+        $("#b22").hide(1000,function(){
+            alert("second hide is exexuted")
+        })
+    })
+   })
+
+
+
+//     hide effect with (speed,easing,callback)
+
+ $(function(){
+
+    $("#b3").click(function(){
+
+        $("#b33").hide({
+            duration: 2000,
+            easing: "swing",
+            complete: function(){
+                alert("Third hide is executed");
+            }
+        });
+
+    });
+
+});
+
 
     </script>
 </body>
