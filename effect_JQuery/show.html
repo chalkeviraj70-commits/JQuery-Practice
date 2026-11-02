@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../../jquery2.js"></script>
+</head>
+<body>
+
+    <h1 id="b11">this is effect in js</h1>
+    
+
+    <button id="b1">hide1</button>
+    <button id="b1a">show1</button>
+
+
+<!-- // hide effect with (speed and callback) -->
+
+    <h1 id="b22">this is hide effect with (speed and callback)</h1>
+    <button id="b2">hide2</button>
+    <button id="b2a">show2</button>
+
+<!--  hide effect with (speed,easing, callback) -->
+
+    <h1 id="b33">this is hide effect with (speed,easing,callback)</h1>
+    <button id="b3">hide</button>
+    <button id="b3a">show3</button>
+
+    <script>
+   
+   $(function(){
+    $("#b1").click(function(){
+        $("#b11").hide()
+    })
+   })
+   $(function(){
+    $("#b1a").click(function(){
+        $("#b11").show()
+    })
+   })
+
+
+//     hide effect with (speed and callback)
+
+   $(function(){
+    $("#b2").click(function(){
+        $("#b22").hide(1000,function(){
+            alert("second hide is exexuted")
+        })
+    })
+
+    $(function(){
+        $("#b2a").click(function(){
+        
+            $("#b22").show(1000, function(){
+                alert("second show is executed")
+            })
+        })
+    })
+   })
+
+
+
+//     hide effect with (speed,easing,callback)
+
+ $(function(){
+
+    $("#b3").click(function(){
+
+        $("#b33").hide({
+            duration: 2000,
+            easing: "swing",
+            complete: function(){
+                alert("Third hide is executed");
+            }
+        });
+
+    });
+
+    $(function(){
+        $("#b3a").click(function(){
+            $("#b33").show({
+                     duration:2000,
+                     easing:"swing",
+                     complete: function(){
+                        alert("third show executed.")
+                     }
+
+            })
+        })
+    })
+
+});
+
+
+    </script>
+</body>
+</html>
