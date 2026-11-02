@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../../jquery2.js"></script>
+    <style>
+        .container{
+            height: 400px;
+            width: 700px;
+            border: 1px solid red;
+            background-color: rgb(21, 140, 170);
+            
+            /* display: none; */
+        }
+
+        h1{
+            color: black;
+            align-items: center;
+        }
+        button{
+            height: 60px;
+            width: 120px;
+            font-size: 20px
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="content">
+        <h1>this is fade out effect</h1>
+    </div>
+
+    <button>fade out</button>
+
+
+    <script>
+        $(function(){
+            $("button").click(function(){
+                $("#content").fadeOut(2000)
+            })
+        })
+    </script>
+
+</body>
+</html>
