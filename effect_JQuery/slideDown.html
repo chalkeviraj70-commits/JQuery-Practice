@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery Slide Down</title>
+    <script src="../jquery2.js"></script>
+</head>
+<body>
+
+    <button id="btn">Slide Down</button>
+
+    <div id="box" style="
+        width: 200px;
+        height: 150px;
+        background-color: lightblue;
+        display: none;
+        text-align: center;
+    ">
+        <h2>Hello Viraj!</h2>
+        <p>Welcome to jQuery</p>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+
+            $("#btn").click(function(){
+
+                $("#box").slideDown(2000);
+
+            });
+
+        });
+    </script>
+
+</body>
+</html>
