@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery Slide Up</title>
+    <script src="../jquery2.js"></script>
+</head>
+<body>
+
+    <button id="btn">Slide Up</button>
+
+    <div id="box" style="
+        width: 200px;
+        height: 150px;
+        background-color: lightblue;
+        text-align: center;
+    ">
+        <h2>Hello Viraj!</h2>
+        <p>Welcome to jQuery</p>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+
+            $("#btn").click(function(){
+
+                $("#box").slideUp(2000);
+
+            });
+
+        });
+    </script>
+
+</body>
+</html>
