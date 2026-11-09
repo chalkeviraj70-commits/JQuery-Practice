@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../jquery2.js"></script>
+    <style>
+        .one{
+            height: 200px;
+            width: 200px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="one"></div>
+    <input type="button" value="clickme">
+
+
+
+    <script>
+        $(function(){
+            $("input").click(function(){
+                $(".one").animate({
+                    height:"300px",
+                    width : "300px",
+                    left :"100px",
+                    backgroundColor: "green"
+                }, 2000)
+            })
+
+
+       
+        })
+
+        $(function(){
+                  $("input").click(function(){
+                $(".one").animate({
+                    height:"200px",
+                    width : "200px",
+                    left :"0px",
+                    backgroundColor: "red"
+                }, 2000)
+            })
+        })
+    </script>
+</body>
+</html>
