@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../jquery2.js"></script>
+</head>
+<body>
+    <div class="one">
+        <h1>this is get text method</h1>
+        <input type="button" value="clickme">
+    </div>
+
+
+
+    <script>
+          $(function(){
+            $("input").click(function(){
+                $("h1").text("hello dear")
+            })
+
+             $("input").dblclick(function(){
+                $("h1").text("this is get text method ")
+            })
+          })
+
+    </script>
+</body>
+</html>
