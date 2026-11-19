@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery Before</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+
+    <div id="box">
+        <h2>Hello World</h2>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            $("#box").before("<p>This is before element</p>");
+        });
+    </script>
+
+</body>
+</html>
